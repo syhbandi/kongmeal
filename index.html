@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kongmeal v2</title>
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="assets/owlCarousel/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/owlCarousel/owl.theme.default.min.css"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/a9a71e58f1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="navbar">
+      <div id="navbar-wrapper">
+        <div class="main-nav">
+          <button class="sidenav-btn">
+            <svg
+              version="1.1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              style="width: 24px; height: 24px"
+            >
+              <path
+                fill="#FFF"
+                stroke="none"
+                pid="0"
+                d="M21.5 7h-19a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h19a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5zm.5 5.5v-1a.5.5 0 0 0-.5-.5h-19a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h19a.5.5 0 0 0 .5-.5zm0 6v-1a.5.5 0 0 0-.5-.5h-19a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h19a.5.5 0 0 0 .5-.5z"
+              ></path>
+            </svg>
+          </button>
+          <ul>
+            <li>
+              <a href=""><i class="fas fa-heart"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-history"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar">
+          <span class="search-placeholder">Mau makan apa?</span>
+          <span class="fas fa-search"></span>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar -->
+
+    <div id="sidenav" class="sidenav">
+      <a href="javascript:void(0)" class="sidenav-close">&times;</a>
+      <div class="sidenav-header">Kongmeal</div>
+      <div class="sidenav-content">
+        <ul class="sidenav-nav">
+          <li class="sidenav-item">
+            <a href="" class="sidenav-link"
+              ><span class="fas fa-user"></span>Akun</a
+            >
+          </li>
+          <li class="sidenav-item">
+            <a href="" class="sidenav-link"
+              ><span class="fas fa-heart"></span>Favorit</a
+            >
+          </li>
+          <li class="sidenav-item">
+            <a href="" class="sidenav-link"
+              ><span class="fas fa-history"></span>Transaksi</a
+            >
+          </li>
+          <li class="sidenav-item">
+            <a href="" class="sidenav-link"
+              ><span class="s fas fa-question-circle"></span>Bantuan</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sidenav-overlay"></div>
+
+    <main id="main-content">
+      <!-- banner -->
+      <section id="banner">
+        <div class="banner owl-carousel owl-theme">
+          <div class="item">
+            <img src="./img/banner1.jpg" alt="banner1" />
+          </div>
+          <div class="item">
+            <img src="./img/banner2.jpg" alt="banner2" />
+          </div>
+          <div class="item">
+            <img src="./img/banner3.png" alt="banner3" />
+          </div>
+        </div>
+        <hr />
+      </section>
+
+      <!-- menu kategori -->
+      <section id="kategori">
+        <div class="section-header">
+          <h3 class="section-title">Kategori</h3>
+        </div>
+        <div class="section-content">
+          <div class="row">
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <div class="menu-icon">
+                  <img
+                    src="./img/TERDEKAT.png"
+                    alt="terdekat"
+                    class="icon-img"
+                  />
+                  <span>Terdekat</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <div class="menu-icon">
+                  <img
+                    src="./img/TERLARIS.png"
+                    alt="terlaris"
+                    class="icon-img"
+                  />
+                  <span>Terlaris</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <div class="menu-icon">
+                  <img src="./img/TERBARU.png" alt="terbaru" class="icon-img" />
+                  <span>Terbaru</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <div class="menu-icon">
+                  <img src="./img/PROMO.png" alt="24 jam" class="icon-img" />
+                  <span>Promo</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <div class="menu-icon">
+                  <img src="./img/24JAM.png" alt="24 jam" class="icon-img" />
+                  <span>24 Jam</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <div class="menu-icon">
+                  <img src="./img/HEMAT.png" alt="hemat" class="icon-img" />
+                  <span>Hemat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </section>
+
+      <!-- menu populer -->
+      <section id="menu-populer">
+        <div class="section-header">
+          <div class="section-title">Menu Populer</div>
+          <a href="" class="section-link">Lihat semua</a>
+        </div>
+
+        <div class="section-content">
+          <div class="menu-populer owl-carousel owl-theme">
+            <div class="item">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top menu-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="menu-content">
+                  <b class="menu-name">Charsiu chicken noodle</b>
+                  <span class="menu-desc">
+                    <span>25.000</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top menu-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="menu-content">
+                  <b class="menu-name">Charsiu chicken</b>
+                  <span class="menu-desc">
+                    <span>25.000</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top menu-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="menu-content">
+                  <b class="menu-name">Charsiu chicken</b>
+                  <span class="menu-desc">
+                    <span>25.000</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top menu-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="menu-content">
+                  <b class="menu-name">Charsiu chicken</b>
+                  <span class="menu-desc">
+                    <span>25.000</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </section>
+
+      <!-- rekomendasi resto -->
+      <section id="rekom-resto">
+        <div class="section-header">
+          <div class="section-title">Rekomendasi Resto</div>
+          <a href="" class="section-link">Lihat semua</a>
+        </div>
+        <div class="section-content">
+          <div class="row">
+            <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top resto-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="resto-content">
+                  <b class="resto-name">Mane</b>
+                  <span class="resto-desc">
+                    <span>4.1</span>
+                    <span>1.4 km</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top resto-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="resto-content">
+                  <b class="resto-name">Mane</b>
+                  <span class="resto-desc">
+                    <span>4.1</span>
+                    <span>1.4 km</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top resto-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="resto-content">
+                  <b class="resto-name">Mane</b>
+                  <span class="resto-desc">
+                    <span>4.1</span>
+                    <span>1.4 km</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top resto-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="resto-content">
+                  <b class="resto-name">Mane</b>
+                  <span class="resto-desc">
+                    <span>4.1</span>
+                    <span>1.4 km</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top resto-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="resto-content">
+                  <b class="resto-name">Mane</b>
+                  <span class="resto-desc">
+                    <span>4.1</span>
+                    <span>1.4 km</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+              <div class="card shadow-sm rounded">
+                <img
+                  class="card-img-top resto-img"
+                  src="./img/banner1.jpg"
+                  alt="Card image cap"
+                />
+                <div class="resto-content">
+                  <b class="resto-name">Mane</b>
+                  <span class="resto-desc">
+                    <span>4.1</span>
+                    <span>1.4 km</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- all script here -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/owlCarousel/owl.carousel.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
