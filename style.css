@@ -226,6 +226,15 @@ a {
   font-size: 14px;
 }
 
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
+.card:hover a {
+  text-decoration: none;
+}
+
 .menu-icon {
   max-width: 101px;
   max-height: 101px;
@@ -283,4 +292,17 @@ a {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
+}
+
+.promo-badge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: -8px;
+  margin-left: -8px;
+  width: 50%;
+}
+
+.promo-badge img {
+  width: 100%;
 }
