@@ -16,6 +16,12 @@ $(function () {
   //searchnav
   $(".search-bar").click(function () {
     $("#searchnav").css("height", "100%");
+    $("body").css("overflow", "hidden");
+  });
+
+  $(".back-btn").click(function () {
+    $("#searchnav").css("height", "0");
+    $("body").css("overflow", "auto");
   });
 
   //banner slide
