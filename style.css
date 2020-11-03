@@ -67,6 +67,17 @@ a {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.searchnav {
+  width: 100%;
+  height: 0;
+  background-color: whitesmoke;
+  position: fixed;
+  overflow-y: hidden;
+  transition: 500ms;
+  bottom: 0;
+  z-index: 1000;
+}
+
 .sidenav-btn {
   color: #333;
   background: none;

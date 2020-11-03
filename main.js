@@ -13,6 +13,11 @@ $(function () {
     $(".sidenav-overlay").removeClass("side-open");
   });
 
+  //searchnav
+  $(".search-bar").click(function () {
+    $("#searchnav").css("height", "100%");
+  });
+
   //banner slide
   $(".banner").owlCarousel({
     margin: 7,
