@@ -13,16 +13,30 @@ a {
 }
 
 #navbar {
-  background-color: var(--meal);
   height: 90px;
 }
 
-#navbar-wrapper {
+.navbar-wrapper {
   position: fixed;
-  padding: 10px 15px;
+  padding: 15px;
   width: 100%;
-  background-color: var(--meal);
   z-index: 999;
+}
+
+.bg-meal {
+  background-color: var(--meal);
+}
+
+.bg-meal a {
+  color: white;
+}
+
+.bg-white {
+  background: white;
+}
+
+.bg-white a {
+  color: #333;
 }
 
 .main-nav {
@@ -31,10 +45,6 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-.main-nav a {
-  color: white;
 }
 
 .main-nav .brand {
@@ -85,7 +95,7 @@ a {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 10px 15px;
+  padding: 15px;
 }
 
 .searchnav-header a {
@@ -96,6 +106,12 @@ a {
 
 .searchnav-header.active {
   box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.search-result {
+  padding: 15px;
+  padding-top: 57px;
+  border-bottom: solid 0.2px rgba(0, 0, 0, 0.05);
 }
 
 .sidenav-btn {
@@ -197,7 +213,7 @@ a {
 }
 
 #main-content {
-  padding: 10px 15px;
+  padding: 15px;
 }
 
 .section-header {
