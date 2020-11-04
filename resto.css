@@ -1,0 +1,65 @@
+#navbar {
+  height: 57px;
+}
+
+.main-nav {
+  transition: all 0.5s;
+}
+
+#resto-header h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.ket-resto {
+  padding: 10px 0;
+}
+
+.bintang,
+.loc {
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+.bintang span {
+  color: #ffc90d;
+  margin-right: 5px;
+}
+
+.loc span {
+  margin-right: 5px;
+}
+
+.cari-diresto {
+  padding-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  height: 0;
+}
+
+.cari-diresto.active {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+#main-content.active {
+  display: none;
+}
+.nama-resto {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.nama-resto {
+  display: inline;
+}
+
+#resto-header.hide {
+  display: none;
+}
+
+#resto-header {
+  display: block;
+}
