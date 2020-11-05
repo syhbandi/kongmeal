@@ -63,3 +63,93 @@
 #resto-header {
   display: block;
 }
+
+.menu {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+}
+
+.blok-menu {
+  display: flex;
+  padding-bottom: 15px;
+}
+
+.blok-aksi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gambar-menu {
+  width: 70px;
+  height: 70px;
+}
+
+.gambar-menu img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-menu {
+  padding-left: 15px;
+  line-height: 1.5;
+}
+
+.nama-menu {
+  font-weight: bold;
+}
+
+.ket-menu {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.harga-menu {
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: auto;
+}
+
+.fav-button {
+  margin-left: auto;
+  opacity: 0.75;
+}
+
+@supports (object-fit: cover) {
+  .gambar-menu img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 5px;
+  }
+}
+
+.rate-menu {
+  color: #ffc90d;
+}
+
+.btn-tambah {
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+}
+
+.btn-tambah:hover {
+  /* background-color: #aa181d; */
+  /* outline: none; */
+  color: white;
+}
+
+.btn-tambah:active {
+  /* border: none; */
+  outline: none;
+}
+
+.btn-catatan {
+  font-size: 14px;
+  border: 0.05px solid rgba(0, 0, 0, 0.5);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
