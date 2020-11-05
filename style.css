@@ -25,6 +25,7 @@ a {
 
 .bg-meal {
   background-color: var(--meal);
+  color: white;
 }
 
 .bg-meal a {
