@@ -248,9 +248,13 @@ a {
   display: block;
 }
 
+/* main content */
+
 #main-content {
   padding: 15px;
 }
+
+/* section css */
 
 .section-header {
   display: flex;
@@ -288,6 +292,8 @@ a {
   text-decoration: none;
 }
 
+/* icon utk menu */
+
 .menu-icon {
   max-width: 101px;
   max-height: 101px;
@@ -310,8 +316,10 @@ a {
   padding-bottom: 15px;
 }
 
+/* section menu populer */
 .menu-populer .item .card {
   height: 200px;
+  position: relative;
 }
 .menu-img {
   object-fit: cover;
@@ -348,11 +356,17 @@ a {
   font-size: 12px;
 }
 
+/* promo badge */
+.menu-populer .promo-badge {
+  z-index: 1009;
+  margin-top: 0;
+  margin-left: 0;
+}
 .promo-badge {
   position: absolute;
   left: 0;
   top: 0;
-  margin-top: 8px;
+  margin-top: -8px;
   margin-left: -4px;
   width: 50%;
 }
