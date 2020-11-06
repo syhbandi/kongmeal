@@ -24,7 +24,9 @@
     <nav id="navbar">
       <div class="navbar-wrapper bg-white">
         <div class="main-nav">
-          <a href=""><span class="fas fa-arrow-left"></span></a>
+          <a href="javascript:void(0)" id="btn-back"
+            ><span class="fas fa-arrow-left"></span
+          ></a>
           <b class="nama-resto">Mane mini resto</b>
           <a href="javascript:void(0)" id="btn-cari"
             ><span class="fas fa-search"></span
@@ -101,15 +103,24 @@
     ></script>
     <!-- <script src="main.js"></script> -->
     <script>
-      $("#cari-input").focus();
-      $("#btn-cari").click(function () {
-        $("#cari-diresto").toggleClass("active");
-        $("#main-content").toggleClass("active");
-        $(".nama-resto").toggleClass("show");
+      $(document).ready(function () {
+        $("#cari-input").focus();
+        $("#btn-cari").click(function () {
+          $("#cari-diresto").addClass("active");
+          $("#main-content").addClass("active");
+          $(".nama-resto").addClass("show");
+          $("#cari-input").focus();
+          $("#btn-cari").css("opacity", "0");
+        });
 
         if ($("#cari-diresto").hasClass("active")) {
-          $("#cari-input").focus();
-          $("#cari-input").val("");
+          console.log("hai");
+          $("#btn-back").click(function () {
+            $("#cari-diresto").removeClass("active");
+            $("#main-content").removeClass("active");
+            $(".nama-resto").removeClass("show");
+            $("#btn-cari").css("opacity", "1");
+          });
         }
       });
     </script>
