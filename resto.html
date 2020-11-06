@@ -113,15 +113,16 @@
           $("#btn-cari").css("opacity", "0");
         });
 
-        if ($("#cari-diresto").hasClass("active")) {
-          console.log("hai");
-          $("#btn-back").click(function () {
+        $("#btn-back").click(function () {
+          if ($("#cari-diresto").hasClass("active")) {
             $("#cari-diresto").removeClass("active");
             $("#main-content").removeClass("active");
             $(".nama-resto").removeClass("show");
             $("#btn-cari").css("opacity", "1");
-          });
-        }
+          } else {
+            window.location = "index.html";
+          }
+        });
       });
     </script>
   </body>
