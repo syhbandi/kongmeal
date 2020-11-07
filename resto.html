@@ -64,6 +64,9 @@
           <div class="menu">
             <div class="blok-menu">
               <div class="gambar-menu">
+                <span class="promo-badge">
+                  <img src="./img/PROMO.svg" style="width: 150%" />
+                </span>
                 <img src="./img/banner2.jpg" alt="" />
               </div>
               <div class="detail-menu">
@@ -76,19 +79,39 @@
             <div class="blok-aksi">
               <div class="rate-menu"><span class="fas fa-star"></span></div>
               <div class="action-button">
-                <button id="catatan" class="btn btn-catatan bg-white">
+                <!-- <button id="catatan" class="btn btn-catatan bg-white">
                   <i class="fas fa-edit"></i>
                   Catatan
-                </button>
-                <button id="tambah" class="btn btn-tambah bg-meal">
-                  Tambah
-                </button>
+                </button> -->
+                <button id="tambah" class="btn btn-tambah bg-meal">Beli</button>
+                <div class="tambah-cart">
+                  <button class="btn-minus">
+                    <span class="fas fa-minus-circle"></span>
+                  </button>
+                  <span class="cart-count"></span>
+                  <button class="btn-plus">
+                    <span class="fas fa-plus-circle"></span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- snackbar -->
+    <a href="javascript:void(0)" id="snackbar-cart">
+      <div class="snackbar-cart">
+        <div class="cart-item">
+          <span class="item"> <span class="item-qty">0</span> Item </span>
+        </div>
+        <div class="subtotal">15000</div>
+      </div>
+    </a>
+
+    <!-- form pesan -->
+    <div id="form-pesan" class="form-pesan">tes</div>
 
     <!-- all script here -->
     <script
@@ -103,26 +126,50 @@
     ></script>
     <!-- <script src="main.js"></script> -->
     <script>
-      $(document).ready(function () {
+      $("#cari-input").focus();
+      $("#btn-cari").click(function () {
+        $("#cari-diresto").addClass("active");
+        $("#main-content").addClass("active");
+        $(".nama-resto").addClass("show");
         $("#cari-input").focus();
-        $("#btn-cari").click(function () {
-          $("#cari-diresto").addClass("active");
-          $("#main-content").addClass("active");
-          $(".nama-resto").addClass("show");
-          $("#cari-input").focus();
-          $("#btn-cari").css("opacity", "0");
-        });
+        $("#btn-cari").css("opacity", "0");
+      });
 
-        $("#btn-back").click(function () {
-          if ($("#cari-diresto").hasClass("active")) {
-            $("#cari-diresto").removeClass("active");
-            $("#main-content").removeClass("active");
-            $(".nama-resto").removeClass("show");
-            $("#btn-cari").css("opacity", "1");
-          } else {
-            window.location = "index.html";
-          }
-        });
+      $("#btn-back").click(function () {
+        if ($("#cari-diresto").hasClass("active")) {
+          $("#cari-diresto").removeClass("active");
+          $("#main-content").removeClass("active");
+          $(".nama-resto").removeClass("show");
+          $("#btn-cari").css("opacity", "1");
+        } else {
+          window.location = "index.html";
+        }
+      });
+
+      //cuma buat ngetes tooas aja
+      let count = 0;
+      $("#tambah").click(function () {
+        console.log("tes");
+        $(".tambah-cart").css("display", "block");
+        $("#tambah").css("display", "none");
+        count++;
+        $(".snackbar-cart").addClass("show");
+        $(".item-qty").html(count);
+      });
+
+      $(".btn-minus").click(function () {
+        count--;
+        if (count <= 0) {
+          $("#tambah").css("display", "block");
+          $(".tambah-cart").css("display", "none");
+          $(".snackbar-cart").removeClass("show");
+        }
+      });
+
+      $("#snackbar-cart").click(function () {
+        console.log("tes");
+        $(".snackbar-cart").removeClass("show");
+        $("#form-pesan").addClass("show");
       });
     </script>
   </body>
