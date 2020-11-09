@@ -100,6 +100,44 @@
       </section>
     </main>
 
+    <div class="searchnav-result">
+      <div class="result menu">
+        <div class="blok-menu">
+          <div class="gambar-menu">
+            <span class="promo-badge">
+              <img src="./img/PROMO.svg" style="width: 150%" />
+            </span>
+            <img src="./img/banner2.jpg" alt="" />
+          </div>
+          <div class="detail-menu">
+            <div class="nama-menu">Charsiu chicken noodle</div>
+            <div class="ket-menu">Mie ayam yang enak cuk</div>
+            <div class="harga-menu">15.000</div>
+          </div>
+          <div class="fav-button"><span class="fas fa-heart"></span></div>
+        </div>
+        <div class="blok-aksi">
+          <div class="rate-menu"><span class="fas fa-star"></span></div>
+          <div class="action-button">
+            <!-- <button id="catatan" class="btn btn-catatan bg-white">
+              <i class="fas fa-edit"></i>
+              Catatan
+            </button> -->
+            <button id="tambah" class="btn btn-tambah bg-meal">Beli</button>
+            <div class="tambah-cart">
+              <button class="btn-minus">
+                <span class="fas fa-minus-circle"></span>
+              </button>
+              <span class="cart-count"></span>
+              <button class="btn-plus">
+                <span class="fas fa-plus-circle"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- snackbar -->
     <a href="javascript:void(0)" id="snackbar-cart">
       <div class="snackbar-cart">
@@ -111,7 +149,61 @@
     </a>
 
     <!-- form pesan -->
-    <div id="form-pesan" class="form-pesan">tes</div>
+    <div id="form-pesan" class="form-pesan">
+      <div class="form-pesan-header">
+        <a href="javascript:void(0)" class="back-btn">
+          <span class="fas fa-arrow-left"></span>
+        </a>
+        <span>Mane Mini resto</span>
+      </div>
+      <div class="form-pesan-content">
+        <!-- alamat pengiriman -->
+        <section id="al-pengiriman" class="pt-3">
+          <div class="al-pengiriman">
+            <span class="al-pengiriman-label">Alamat Pengiriman</span>
+            <b>Jl. Jember No.1 taman baru mataram</b>
+          </div>
+          <div>
+            <textarea
+              name="catatan_pengiriman"
+              id="catatan_pengiriman"
+              class="form-control"
+              placeholder="Catatan tambahan"
+            ></textarea>
+          </div>
+        </section>
+
+        <!-- detail pesanan -->
+        <section class="pt-3">
+          <div class="section-header">
+            <span class="section-title">Detail Pesanan</span>
+          </div>
+          <div class="section-content">
+            <div class="blok-menu">
+              <div class="gambar-menu">
+                <span class="promo-badge">
+                  <img src="./img/PROMO.svg" style="width: 150%" />
+                </span>
+                <img src="./img/banner2.jpg" alt="" />
+              </div>
+              <div class="detail-menu">
+                <div class="nama-menu">Charsiu chicken noodle</div>
+                <div class="ket-menu">Mie ayam yang enak cuk</div>
+                <div class="harga-menu">15.000</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- detail pembayaran -->
+        <section>
+          <div class="section-header">
+            <span class="section-title">Detail Pembayaran</span>
+          </div>
+          <div class="section-content"></div>
+        </section>
+      </div>
+    </div>
 
     <!-- all script here -->
     <script
@@ -126,6 +218,16 @@
     ></script>
     <!-- <script src="main.js"></script> -->
     <script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= 60) {
+          $(".navbar-wrapper").addClass("scroll");
+          $(".nama-resto").addClass("show");
+        } else {
+          $(".navbar-wrapper").removeClass("scroll");
+          $(".nama-resto").removeClass("show");
+        }
+      });
+
       $("#cari-input").focus();
       $("#btn-cari").click(function () {
         $("#cari-diresto").addClass("active");
@@ -148,10 +250,10 @@
 
       //cuma buat ngetes tooas aja
       let count = 0;
-      $("#tambah").click(function () {
+      $(".btn-tambah").click(function () {
         console.log("tes");
         $(".tambah-cart").css("display", "block");
-        $("#tambah").css("display", "none");
+        $(".btn-tambah").css("display", "none");
         count++;
         $(".snackbar-cart").addClass("show");
         $(".item-qty").html(count);
@@ -160,16 +262,25 @@
       $(".btn-minus").click(function () {
         count--;
         if (count <= 0) {
-          $("#tambah").css("display", "block");
+          $(".btn-tambah").css("display", "block");
           $(".tambah-cart").css("display", "none");
           $(".snackbar-cart").removeClass("show");
         }
       });
 
+      //keluarin cart
       $("#snackbar-cart").click(function () {
         console.log("tes");
         $(".snackbar-cart").removeClass("show");
         $("#form-pesan").addClass("show");
+        $("body").css("overflow", "hidden");
+      });
+
+      //form pesan action
+      $(".back-btn").click(function () {
+        $("#form-pesan").removeClass("show");
+        $("body").css("overflow", "auto");
+        $(".snackbar-cart").addClass("show");
       });
     </script>
   </body>
