@@ -10,6 +10,12 @@
 
 a {
   text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #333;
 }
 
 #navbar {
@@ -282,16 +288,6 @@ a {
   font-size: 14px;
 }
 
-.card a {
-  text-decoration: none;
-  color: black;
-  text-align: center;
-}
-
-.card:hover a {
-  text-decoration: none;
-}
-
 /* icon utk menu */
 
 .menu-icon {
@@ -319,7 +315,6 @@ a {
 /* section menu populer */
 .menu-populer .item .card {
   height: 200px;
-  position: relative;
 }
 .menu-img {
   object-fit: cover;
