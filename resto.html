@@ -196,6 +196,7 @@
               </div>
             </div>
           </div>
+          <hr />
         </section>
 
         <!-- detail pembayaran -->
@@ -203,8 +204,28 @@
           <div class="section-header">
             <span class="section-title">Detail Pembayaran</span>
           </div>
-          <div class="section-content"></div>
+          <div class="section-content">
+            <div class="detail-pembayaran-label">
+              <span>Subtotal</span>
+              <span>15000</span>
+            </div>
+            <div class="detail-pembayaran-label">
+              <span>Diskon</span>
+              <span>0</span>
+            </div>
+            <div class="detail-pembayaran-label">
+              <span>Ongkir</span>
+              <span>8000</span>
+            </div>
+            <div class="detail-pembayaran-label">
+              <span>Subtotal</span>
+              <span>23000</span>
+            </div>
+          </div>
         </section>
+      </div>
+      <div class="cari-driver">
+        <button class="btn btn-cari-driver bg-meal">Cari Driver</button>
       </div>
     </div>
 
@@ -221,13 +242,24 @@
     ></script>
     <!-- <script src="main.js"></script> -->
     <script>
+      // efek scroll di semua
       $(window).scroll(function () {
-        if ($(window).scrollTop() >= 60) {
+        if ($(window).scrollTop() >= 50) {
+          $(".form-pesan-header").addClass("scroll");
           $(".navbar-wrapper").addClass("scroll");
           $(".nama-resto").addClass("show");
         } else {
           $(".navbar-wrapper").removeClass("scroll");
+          $(".form-pesan-header").removeClass("scroll");
           $(".nama-resto").removeClass("show");
+        }
+      });
+
+      $("#form-pesan").scroll(function () {
+        if ($(this).scrollTop >= 50) {
+          $(this).addClass("scroll");
+        } else {
+          $(this).removeClass("scroll");
         }
       });
 
@@ -250,7 +282,6 @@
           window.location = "index.html";
         }
       });
-
       //cuma buat ngetes tooas aja
       let count = 0;
       $(".btn-tambah").click(function () {
