@@ -174,6 +174,7 @@
               placeholder="Catatan tambahan"
             ></textarea>
           </div>
+          <hr />
         </section>
 
         <!-- detail pesanan -->
@@ -182,17 +183,49 @@
             <span class="section-title">Detail Pesanan</span>
           </div>
           <div class="section-content">
-            <div class="blok-menu">
-              <div class="gambar-menu">
-                <span class="promo-badge">
-                  <img src="./img/PROMO.svg" style="width: 150%" />
-                </span>
-                <img src="./img/banner2.jpg" alt="" />
+            <div class="menu">
+              <div class="blok-menu">
+                <div class="gambar-menu">
+                  <span class="promo-badge">
+                    <img src="./img/PROMO.svg" style="width: 150%" />
+                  </span>
+                  <img src="./img/banner2.jpg" alt="" />
+                </div>
+                <div class="detail-menu">
+                  <div class="nama-menu">Charsiu chicken noodle</div>
+                  <div class="ket-menu">Mie ayam yang enak cuk</div>
+                  <div class="harga-menu">
+                    <span class="harga">15.000</span>
+                    <span class="harga-coret"><s>15.000</s></span>
+                  </div>
+                </div>
+                <div class="fav-button"><span class="fas fa-heart"></span></div>
               </div>
-              <div class="detail-menu">
-                <div class="nama-menu">Charsiu chicken noodle</div>
-                <div class="ket-menu">Mie ayam yang enak cuk</div>
-                <div class="harga-menu">15.000</div>
+              <div class="blok-aksi">
+                <div class="rate-menu"><span class="fas fa-star"></span></div>
+                <div class="action-button">
+                  <button id="tambah" class="btn btn-tambah bg-meal">
+                    Beli
+                  </button>
+                  <div class="tambah-cart">
+                    <button class="btn-minus">
+                      <span class="fas fa-minus-circle"></span>
+                    </button>
+                    <span class="cart-count"></span>
+                    <button class="btn-plus">
+                      <span class="fas fa-plus-circle"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="blok-catatan pt-2">
+                <input
+                  type="text"
+                  name="catatan-menu"
+                  id="catatan-menu"
+                  class="form-control"
+                  placeholder="catatan tambahan"
+                />
               </div>
             </div>
           </div>
