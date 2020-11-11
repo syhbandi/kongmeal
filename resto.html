@@ -276,8 +276,27 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima
             quasi.
           </div>
+          <div class="harga-menu">15000</div>
         </div>
+
         <button class="btn btn-tambah-cart bg-meal">Tambah Ke cart</button>
+      </div>
+    </div>
+
+    <!-- edit alamat pengiriman -->
+    <div class="edit-al-pengiriman">
+      <div class="eap-overlay"></div>
+      <div class="eap-wrapper">
+        <div class="eap-input mb-2">
+          <input
+            type="text"
+            name="eap-loc"
+            placeholder="current loc"
+            class="form-control"
+          />
+        </div>
+        <div class="eap-map mb-2"></div>
+        <button class="btn bg-meal btn-tambah-cart">Ganti lokasi</button>
       </div>
     </div>
 
@@ -375,6 +394,17 @@
       //click function tombol cari driver
       $(".btn-cari-driver").click(function () {
         window.location = "proses.html";
+      });
+
+      //ganti alamat pengiriman
+      $(".al-pengiriman").click(function () {
+        $(".eap-overlay").addClass("show");
+        $(".eap-wrapper").addClass("show");
+      });
+
+      $(".eap-overlay").click(function () {
+        $(this).removeClass("show");
+        $(".eap-wrapper").removeClass("show");
       });
     </script>
   </body>
