@@ -101,7 +101,8 @@
 
 .ket-menu {
   font-size: 12px;
-  opacity: 0.5;
+  opacity: 0.75;
+  text-align: justify;
 }
 
 .harga-menu {
@@ -139,17 +140,13 @@
   padding: 5px 50px;
   outline: none;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-  /* width: 150px; */
 }
 
 .btn-tambah:hover {
-  /* background-color: #aa181d; */
-  /* outline: none; */
   color: white;
 }
 
 .btn-tambah:active {
-  /* border: none; */
   outline: none;
 }
 
@@ -310,13 +307,9 @@
 }
 
 .cari-driver {
-  /* position: fixed; */
-  /* bottom: 0; */
-  /* left: 0; */
   z-index: 1011;
   width: 100%;
   padding: 10px 15px;
-  /* box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.1); */
   background: whitesmoke;
 }
 
@@ -326,4 +319,74 @@
 
 .btn-cari-driver:active {
   color: white;
+}
+
+/* detail menu */
+.detail-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1015;
+  transition: all 0.3s;
+  display: none;
+}
+
+.detail-menu-overlay.show {
+  display: block;
+}
+
+.detail-menu-box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background: white;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s;
+  z-index: 1016;
+  padding: 15px;
+  margin-bottom: -120%;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-menu-box.show {
+  margin-bottom: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.detail-menu-box .gambar-menu {
+  width: 100%;
+  height: 60%;
+  background: rosybrown;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+}
+
+.detail-menu-box .gambar-menu img {
+  width: 100%;
+  height: auto;
+}
+
+@supports (object-fit: cover) {
+  .detail-menu-box .gambar-menu img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 10px;
+  }
+}
+
+.btn-tambah-cart {
+  width: 100%;
+  margin-top: auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }

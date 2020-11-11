@@ -61,8 +61,8 @@
           <span class="section-title">Menu populer</span>
         </div>
         <div class="section-content">
-          <div class="menu">
-            <div class="blok-menu">
+          <div class="menu" id="menu">
+            <div class="blok-menu" id="blok-menu1">
               <div class="gambar-menu">
                 <span class="promo-badge">
                   <img src="./img/PROMO.svg" style="width: 150%" />
@@ -262,6 +262,25 @@
       </div>
     </div>
 
+    <!-- detail menu -->
+    <div class="detail-menu-wrapper">
+      <div class="detail-menu-overlay"></div>
+
+      <div class="detail-menu-box">
+        <div class="gambar-menu">
+          <img src="./img/banner2.jpg" alt="" />
+        </div>
+        <div class="desk-menu">
+          <div class="nama-menu">Charsiu Chiken Noodle</div>
+          <div class="ket-menu">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit minima
+            quasi.
+          </div>
+        </div>
+        <button class="btn btn-tambah-cart bg-meal">Tambah Ke cart</button>
+      </div>
+    </div>
+
     <!-- all script here -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -278,21 +297,11 @@
       // efek scroll di semua
       $(window).scroll(function () {
         if ($(window).scrollTop() >= 50) {
-          $(".form-pesan-header").addClass("scroll");
           $(".navbar-wrapper").addClass("scroll");
           $(".nama-resto").addClass("show");
         } else {
           $(".navbar-wrapper").removeClass("scroll");
-          $(".form-pesan-header").removeClass("scroll");
           $(".nama-resto").removeClass("show");
-        }
-      });
-
-      $("#form-pesan").scroll(function () {
-        if ($(this).scrollTop >= 50) {
-          $(this).addClass("scroll");
-        } else {
-          $(this).removeClass("scroll");
         }
       });
 
@@ -315,6 +324,19 @@
           window.location = "index.html";
         }
       });
+
+      $("#blok-menu1").click(function () {
+        $(".detail-menu-overlay").addClass("show");
+        $(".detail-menu-box").addClass("show");
+        $("body").css("overflow", "hidden");
+      });
+
+      $(".detail-menu-overlay").click(function () {
+        $(this).removeClass("show");
+        $(".detail-menu-box").removeClass("show");
+        $("body").css("overflow", "auto");
+      });
+
       //cuma buat ngetes tooas aja
       let count = 0;
       $(".btn-tambah").click(function () {
@@ -348,6 +370,11 @@
         $("#form-pesan").removeClass("show");
         $("body").css("overflow", "auto");
         $(".snackbar-cart").addClass("show");
+      });
+
+      //click function tombol cari driver
+      $(".btn-cari-driver").click(function () {
+        window.location = "proses.html";
       });
     </script>
   </body>
