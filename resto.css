@@ -14,6 +14,7 @@
   font-size: 1.3rem;
   font-weight: bold;
 }
+
 .ket-resto {
   padding: 10px 0;
 }
@@ -189,6 +190,7 @@
   justify-content: space-between;
   align-items: center;
   transition: all 0.2s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .cart-item {
