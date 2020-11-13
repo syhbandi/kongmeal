@@ -24,6 +24,7 @@
   border-radius: 10px 10px 0px 0px;
   cursor: pointer;
   transition: height 0.5s;
+  width: 100%;
 }
 
 .proses-pesanan.full {
@@ -114,4 +115,9 @@
   border: none;
   margin-left: 15px;
   margin-top: 15px;
+}
+
+.back-wrapper:active,
+.back-wrapper:focus {
+  outline: none;
 }
