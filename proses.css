@@ -1,0 +1,96 @@
+.peta {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: salmon;
+}
+
+.proses-pesanan {
+  position: absolute;
+  width: 100%;
+  height: 170px;
+  left: 0;
+  bottom: 0;
+
+  background: #ffffff;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 10px 10px 0px 0px;
+  cursor: pointer;
+  transition: height 0.5s;
+}
+
+.proses-pesanan.full {
+  height: 100%;
+  border-radius: 0;
+  overflow: scroll;
+}
+
+.swap {
+  position: fixed;
+  align-self: center;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+  /* border-bottom: solid 0.2px rgba(0, 0, 0, 0.05); */
+  background: #fff;
+}
+
+.blok-proses {
+  display: flex;
+  /* align-items: center; */
+  padding: 10px 15px;
+}
+
+.blok-img {
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+}
+
+.blok-chat {
+  margin-left: auto;
+  width: 24px;
+}
+
+.blok-chat img {
+  width: 100%;
+}
+
+.blok-img img {
+  width: 100%;
+}
+
+.blok-ket {
+  line-height: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.ket-atas,
+.ket-bawah {
+  font-size: 14px;
+}
+
+.ket-atas {
+  font-weight: bold;
+}
+
+.ket-bawah {
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bp-header {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.5);
+  /* font-weight: bold; */
+  padding: 15px;
+  padding-bottom: 0;
+}
+
+.item-p {
+  padding-bottom: 0;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proses pemesanan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/a9a71e58f1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="proses.css" />
+  </head>
+  <body>
+    <div class="peta" id="peta">
+      <div class="peta-wrapper"></div>
+      <div class="proses-pesanan" id="proses-pesanan">
+        <div class="swap">
+          <span class="fas fa-angle-double-up"></span>
+        </div>
+
+        <!-- blok proses status pesanan-->
+        <div class="blok-proses mt-4">
+          <div class="blok-img">
+            <img src="./img/menu-cooked.png" alt="menu masuk" />
+          </div>
+          <div class="blok-ket">
+            <span class="ket-atas">Pesanan kamu sudah masuk</span>
+            <span class="ket-bawah">Sedang dikonfirmasi resto</span>
+          </div>
+        </div>
+
+        <!-- blok proses driver -->
+        <div class="blok-proses">
+          <div class="blok-img">
+            <img src="./img/driver.png" alt="driver" />
+          </div>
+          <div class="blok-ket">
+            <span class="ket-bawah">DR2249HN</span>
+            <span class="ket-atas">Ahmad Syahbandi</span>
+          </div>
+          <div class="blok-chat">
+            <img src="./img/chat.png" alt="tombol chat" />
+          </div>
+        </div>
+
+        <!-- detail pesanan -->
+        <div class="dt-pesanan">
+          <div class="bp-header">Detail Pesanan</div>
+          <!-- resto -->
+          <div class="blok-proses">
+            <div class="blok-img">
+              <div
+                style="
+                  background: var(--meal);
+                  border-radius: 50%;
+                  width: 32px;
+                  height: 32px;
+                "
+              ></div>
+            </div>
+            <div class="blok-ket">
+              <span class="ket-bawah">Resto</span>
+              <span class="ket-atas">Mane Mini Resto</span>
+            </div>
+          </div>
+          <!-- alamat pengiriman -->
+          <div class="blok-proses">
+            <div class="blok-img">
+              <div
+                style="
+                  background: #ffc90d;
+                  border-radius: 50%;
+                  width: 32px;
+                  height: 32px;
+                "
+              ></div>
+            </div>
+            <div class="blok-ket">
+              <span class="ket-bawah">Alamat Pengiriman</span>
+              <span class="ket-atas"
+                >Jl. Jember No.1 Taman baru Mataram NTB Indonesia</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- info pesanan -->
+        <div class="in-pesanan">
+          <div class="bp-header">Info</div>
+          <div class="blok-proses">
+            <span class="ket-atas">FF10201113</span>
+            <span class="ml-auto">Hari ini, 10.12</span>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="items pb-3">
+          <div class="bp-header">Item</div>
+
+          <!-- loop items here -->
+          <div class="blok-proses item-p">
+            <span>Charsiu Chiken Noodle</span>
+            <span class="ml-auto">1</span>
+          </div>
+
+          <div class="blok-proses item-p">
+            <span>Charsiu Chiken Noodle</span>
+            <span class="ml-auto">1</span>
+          </div>
+        </div>
+
+        <!-- detail pembayaran -->
+        <div class="dt-pembayaran pb-3">
+          <div class="bp-header">Detail Pembayaran</div>
+          <div class="blok-proses item-p">
+            <span class="ket-atas">Subtotal</span>
+            <span class="ml-auto">10000</span>
+          </div>
+          <div class="blok-proses item-p">
+            <span class="ket-atas">Diskon</span>
+            <span class="ml-auto">0</span>
+          </div>
+          <div class="blok-proses item-p">
+            <span class="ket-atas">Ongkir</span>
+            <span class="ml-auto">8000</span>
+          </div>
+          <div class="blok-proses item-p">
+            <span class="ket-atas">Total</span>
+            <span class="ml-auto">18000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
+      integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".swap").click(function () {
+        if ($(this).children("span").hasClass("fa-angle-double-up")) {
+          $(this).parent().addClass("full");
+          $(this).children("span").removeClass("fa-angle-double-up");
+          $(this).children("span").addClass("fa-angle-double-down");
+        } else {
+          $(this).parent().removeClass("full");
+          $(this).children("span").addClass("fa-angle-double-up");
+          $(this).children("span").removeClass("fa-angle-double-down");
+        }
+      });
+    </script>
+  </body>
+</html>
