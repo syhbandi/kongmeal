@@ -30,6 +30,7 @@
   height: 100%;
   border-radius: 0;
   overflow: scroll;
+  z-index: 1001;
 }
 
 .swap {
@@ -98,4 +99,19 @@
 
 .item-p {
   padding-bottom: 0;
+}
+
+.back-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+  border: none;
+  margin-left: 15px;
+  margin-top: 15px;
 }
