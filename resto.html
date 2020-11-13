@@ -385,7 +385,7 @@
       </div>
     </div>
 
-    <!-- peta dan detail pesanan -->
+    <!-- proses pengiriman -->
     <div class="peta" id="peta">
       <div class="peta-wrapper"></div>
       <div class="proses-pesanan" id="proses-pesanan">
@@ -602,9 +602,8 @@
 
       //click function tombol cari driver
       $(".btn-cari-driver").click(function () {
-        $(".peta").addClass("nongol");
         $("#form-pesan").removeClass("show");
-        $("body").css("overflow", "auto");
+        $("#peta").addClass("nongol");
       });
 
       //ganti alamat pengiriman
