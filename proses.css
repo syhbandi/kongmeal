@@ -1,8 +1,15 @@
 .peta {
-  position: fixed;
+  position: absolute;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   background-color: salmon;
+  z-index: 1000;
+  display: none;
+}
+
+.peta.nongol {
+  display: block;
 }
 
 .proses-pesanan {
@@ -32,8 +39,6 @@
   text-align: center;
   width: 100%;
   border-radius: 10px 10px 0px 0px;
-  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
-  /* border-bottom: solid 0.2px rgba(0, 0, 0, 0.05); */
   background: #fff;
 }
 
