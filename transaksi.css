@@ -1,0 +1,53 @@
+#navbar {
+  height: 57px;
+}
+
+.rw-trans {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.rw-resto {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.rw-icon {
+  width: 65px;
+  height: 65px;
+  margin-right: 15px;
+}
+
+.rw-icon img {
+  width: 100%;
+}
+
+.teks-tebal {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.teks-tipis {
+  font-size: 12px;
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.teks-batal {
+  color: #e62129;
+}
+
+.teks-sukses {
+  color: #0f9d58;
+}
+
+.teks-proses {
+  color: #ffc90d;
+}
+
+.dot-custom {
+  font-size: 5px;
+  vertical-align: middle;
+}
