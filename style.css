@@ -29,6 +29,10 @@ a:hover {
   z-index: 999;
 }
 
+.navbar-wrapper.scroll {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .bg-meal {
   background-color: var(--meal);
   color: white;
@@ -367,4 +371,18 @@ a:hover {
 
 .promo-badge img {
   width: 100%;
+}
+
+.btn-meal {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-meal:focus,
+.btn-meal:active,
+.btn-meal:hover {
+  outline: none;
+  color: white;
 }
