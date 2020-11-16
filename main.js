@@ -1,5 +1,13 @@
 // load jquery paling atas
 $(function () {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() >= 50) {
+      $(".navbar-wrapper").addClass("scroll");
+    } else {
+      $(".navbar-wrapper").removeClass("scroll");
+    }
+  });
+
   // slide in menu
   $(".sidenav-btn").click(function (e) {
     $("#sidenav").css("width", "320px");

@@ -10,13 +10,12 @@
 
 .rw-resto {
   display: flex;
-  flex-direction: row;
   cursor: pointer;
 }
 
 .rw-icon {
-  width: 65px;
-  height: 65px;
+  width: 30px;
+  height: 30px;
   margin-right: 15px;
 }
 
