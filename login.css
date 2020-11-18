@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+:root {
+  --meal: #e62129;
+  --hover: #d4292f;
+  --click: #b8181e;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open-sans", "Roboto";
+  background-color: #f4f4f4;
+  font-size: 14px;
+}
+
+.login-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.login-form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-form .group {
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+.login-form .group.lupa {
+  padding-top: 0;
+}
+
+.group input[type="text"],
+.group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  outline: none;
+  background-color: white;
+  font-size: 16px;
+}
+
+.group button {
+  background-color: var(--meal);
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.group button:hover {
+  background-color: var(--hover);
+}
+.group button:focus,
+.group button:active {
+  background-color: var(--click);
+}
+
+.icon-mata {
+  position: relative;
+  float: right;
+  margin-top: -27px;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.foot {
+  margin-top: auto;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.df-link {
+  color: var(--meal);
+  font-weight: bold;
+}
+
+.lupa-link {
+  color: #333;
+  font-weight: 200;
+}
