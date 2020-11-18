@@ -22,32 +22,44 @@ body {
   font-size: 14px;
 }
 
-.login-wrapper {
-  padding-left: 15px;
-  padding-right: 15px;
+.login-wrapper,
+.fp-wrapper {
+  padding: 15px;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100vw;
+}
+
+.fp-wrapper {
+  display: none;
 }
 
 .logo {
   text-align: center;
   padding-top: 100px;
+  font-weight: normal;
+  font-size: 16px;
 }
 
-.login-form {
+.logo img {
+  width: 50%;
+}
+
+.login-form,
+.fp-form {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.login-form .group {
+.group {
   padding-bottom: 15px;
   padding-top: 10px;
 }
 
-.login-form .group.lupa {
+.group.lupa {
   padding-top: 0;
 }
 
@@ -89,12 +101,13 @@ body {
   margin-top: -27px;
   margin-right: 10px;
   color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .foot {
   margin-top: auto;
   text-align: center;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .df-link {
@@ -105,4 +118,13 @@ body {
 .lupa-link {
   color: #333;
   font-weight: 200;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header .header-text {
+  margin: auto;
 }
