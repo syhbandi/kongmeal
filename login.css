@@ -47,6 +47,12 @@ body {
   width: 70%;
 }
 
+.logo p {
+  width: 80%;
+  align-self: center;
+  margin: auto;
+}
+
 .login-form,
 .fp-form {
   margin-top: 50px;
