@@ -23,7 +23,8 @@ body {
 }
 
 .login-wrapper,
-.fp-wrapper {
+.fp-wrapper,
+.rp-wrapper {
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -43,7 +44,7 @@ body {
 }
 
 .logo img {
-  width: 50%;
+  width: 70%;
 }
 
 .login-form,
@@ -64,7 +65,9 @@ body {
 }
 
 .group input[type="text"],
-.group input[type="password"] {
+.group input[type="password"],
+.group input[type="email"],
+.group input[type="number"] {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
@@ -74,7 +77,8 @@ body {
   font-size: 16px;
 }
 
-.group button {
+.group button,
+.group input[type="submit"] {
   background-color: var(--meal);
   width: 100%;
   padding: 15px 10px;
