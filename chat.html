@@ -44,10 +44,11 @@
             id="msg"
             placeholder="isi pesan"
             class="form-control"
+            rows="1"
           ></textarea>
         </div>
         <div class="chat-sn">
-          <button class="btn-send bg-meal">
+          <button class="btn-send">
             <span class="fas fa-paper-plane"></span>
           </button>
         </div>
@@ -68,18 +69,34 @@
       $("html, body").animate({
         scrollTop: $(document).height() - $(window).height(),
       });
+      function check() {
+        const el = this;
+        let sc = el.scrollHeight;
+        const max = 100;
+        setTimeout(function () {
+          el.style.cssText = "height: auto";
+          if (sc <= max) {
+            el.style.cssText = `height:${sc}px`;
+            console.log(el.text);
+          } else {
+            el.style.cssText = `height: ${max}px`;
+          }
+        }, 0);
+      }
       $(".chat-sn").click(function () {
-        let msg = $("#msg").val();
-        if (msg !== "") {
+        let msg = $("#msg");
+        if (msg.val() !== "") {
           $(".chat-container").append(
-            "<div class='cust-chat'>" + msg + "</div>"
+            "<div class='cust-chat'>" + msg.val() + "</div>"
           );
-          $("#msg").val("");
+          msg.val("");
           $("html, body").animate({
             scrollTop: $(document).height() - $(window).height(),
           });
+          msg.css("height", "auto");
         }
       });
+      $("#msg").on("keyup", check);
     </script>
   </body>
 </html>
