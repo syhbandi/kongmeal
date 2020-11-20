@@ -83,6 +83,12 @@
           }
         }, 0);
       }
+
+      function auto_grow() {
+        const element = this;
+        element.style.height = "5px";
+        element.style.height = element.scrollHeight + "px";
+      }
       $(".chat-sn").click(function () {
         let msg = $("#msg");
         if (msg.val() !== "") {
@@ -96,7 +102,7 @@
           msg.css("height", "auto");
         }
       });
-      $("#msg").on("keyup", check);
+      $("#msg").on("input", auto_grow);
     </script>
   </body>
 </html>

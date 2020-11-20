@@ -58,3 +58,10 @@
 .btn-send:focus {
   outline: none;
 }
+
+#msg {
+  resize: none;
+  overflow: hidden;
+  min-height: 20px;
+  max-height: 100px;
+}
