@@ -69,20 +69,6 @@
       $("html, body").animate({
         scrollTop: $(document).height() - $(window).height(),
       });
-      function check() {
-        const el = this;
-        let sc = el.scrollHeight;
-        const max = 100;
-        setTimeout(function () {
-          el.style.cssText = "height: auto";
-          if (sc <= max) {
-            el.style.cssText = `height:${sc}px`;
-            console.log(el.text);
-          } else {
-            el.style.cssText = `height: ${max}px`;
-          }
-        }, 0);
-      }
 
       function auto_grow() {
         const element = this;

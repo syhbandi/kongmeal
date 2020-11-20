@@ -396,3 +396,22 @@ a:hover {
   outline: none;
   color: white;
 }
+
+/* badge */
+.notif-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+}
+.notif-badge-mini {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #b9191f;
+  margin-top: -3px;
+  margin-right: -5px;
+}
