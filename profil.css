@@ -1,0 +1,126 @@
+.up-header {
+  padding: 15px;
+  padding-top: 100px;
+  background-color: #f4f4f4;
+  text-align: center;
+  position: relative;
+}
+.fp {
+  width: 75px;
+  height: 75px;
+  background-color: teal;
+  border: solid white 3px;
+  color: #f4f4f4;
+  border-radius: 50%;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.up-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+.up-email {
+  font-size: 12px;
+}
+
+.up-detail {
+  padding: 15px;
+}
+
+.up-detail-list {
+  list-style: none;
+  padding: 0;
+}
+
+.up-item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 0.2px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+}
+.up-label {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.up-con {
+  font-weight: normal;
+}
+
+.edit-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 70px;
+  margin-right: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.edit-badge:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.edit-wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 2000;
+  transition: all 0.3s;
+  overflow-y: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.edit-wrapper.show {
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+  overflow: scroll;
+}
+
+.edit-header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-close {
+  cursor: pointer;
+}
+
+.edit-con {
+  position: relative;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  outline: none;
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+.edit-footer {
+  width: 100%;
+}
+
+.edit-footer button {
+  width: 100%;
+}
