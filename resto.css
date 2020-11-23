@@ -74,6 +74,7 @@
 }
 
 .menu {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
