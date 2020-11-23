@@ -415,3 +415,11 @@ a:hover {
   margin-top: -3px;
   margin-right: -5px;
 }
+
+.closed-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: not-allowed;
+}
